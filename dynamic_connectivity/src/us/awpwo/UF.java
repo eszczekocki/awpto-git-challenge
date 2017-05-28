@@ -2,7 +2,7 @@ package us.awpwo;
 
 public class UF {
 
-	protected int[] id;
+	private int[] id;
 	
 	private int root(int i) {
  while (i != id[i]) {
@@ -10,6 +10,12 @@ public class UF {
  }
  return i;
 }
+
+public UF(int i){
+id = new int[i];
+}
+
+
 public boolean connected(int p, int q) {
  return root(p) == root(q);
 }
